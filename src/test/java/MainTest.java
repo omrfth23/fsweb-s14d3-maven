@@ -83,7 +83,7 @@ public class MainTest {
         PrintStream saveOut = System.out;
         final ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        assertEquals(car.accelerate(), "the car is accelerating");
+        assertEquals(car.accelerate(), "Car: the car is accelerating");
         assertThat(out.toString(), containsString(car.getClass().getSimpleName()));
     }
 
@@ -146,7 +146,7 @@ public class MainTest {
         assertThat(hybridCar.getName(), instanceOf(String.class));
         assertThat(hybridCar.getDescription(), instanceOf(String.class));
         assertThat(hybridCar.getCylinders(), instanceOf(Integer.class));
-        assertThat(hybridCar.getAvgKmPerLitre(), instanceOf(Double.class))
+        assertThat(hybridCar.getAvgKmPerLitre(), instanceOf(Double.class));
         assertThat(hybridCar.getBatterySize(), instanceOf(Integer.class));
     }
 
